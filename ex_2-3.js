@@ -46,3 +46,11 @@ function countBasketPrice(arr){
 }
 
 countBasketPrice(basket)
+
+// Можно через reduce решить
+
+function countBasketPrice2 (arr2) {
+    console.log(arr2.reduce((acc, item) => {return acc + item.price}, 0));
+}
+
+countBasketPrice2(basket)
