@@ -65,5 +65,28 @@ const peach = new product2('персики', 'фрукты', 735, 15)
 console.log(apple)
 console.log(peach)
 
+//======================================================================
+
+// метод для расчета скидки на товар
+
+var disc = {
+    discFunc(nameProd, discount2){
+        return `${nameProd}, ${'стоимость со скидкой'} ${this.price2 - this.price2 * discount2 / 100}`;
+    }
+}
+
+function product2 (name2, category2, price2) {
+    this.name2 = name2;
+    this.category2 = category2;
+    this.price2 = price2;
+    this.__proto__ = disc;
+ }
+
+const apple2 = new product2('яблоки', 'фрукты', 350);
+const peach2 = new product2('персики', 'фрукты', 735);
+
+console.log(apple2)
+console.log(peach2.discFunc('яблоки',10))
+
 
 
